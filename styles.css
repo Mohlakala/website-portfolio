@@ -1,0 +1,108 @@
+/* Glowing Effect */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda; }
+    50% { text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff; }
+    100% { text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda; }
+}
+
+#animated-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    animation: glow 2s infinite alternate;
+}
+
+/* Typing Effect */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    /* Center text and adjust spacing */
+    body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Make the header and title responsive */
+    header {
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    header h1 {
+        font-size: 32px; /* Reduce size for mobile */
+    }
+
+    /* Stack nav links vertically on smaller screens */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Adjust container width */
+    .container {
+        max-width: 100%;
+    }
+
+    /* Make sections more compact */
+    .home, .projects, .about, .contact {
+        padding: 20px;
+    }
+
+    /* Adjust project cards for smaller screens */
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    /* Optimize social links */
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-links a {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Resize icons */
+    .icon-container {
+        flex-wrap: wrap;
+        font-size: 35px;
+    }
+
+    /* Make buttons and links more tap-friendly */
+    .resume-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
